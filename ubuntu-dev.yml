@@ -1,0 +1,10 @@
+---
+- hosts: localhost 
+  remote_user: bjoern
+  sudo: yes
+
+  tasks:
+
+  - name: Install VI Improved
+    apt: name=vim state=present
+
