@@ -1,0 +1,5 @@
+---
+- src: ssh://pi@raspberrypi/git/ansible-roles.git
+  name: ansible-roles
+  scm: git
+  version: master

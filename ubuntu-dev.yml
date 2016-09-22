@@ -3,6 +3,9 @@
   remote_user: bjoern
   sudo: yes
 
+  roles:
+    - { role: '~/ansible-roles/dev-tools' }
+
   tasks:
 
   - name: Allow VirtualBox Shared Folder Access for User Bjoern
@@ -22,3 +25,6 @@
 
   - name: Install TeXLive
     apt: name=texlive-full state=present
+
+  - name: Install Digikam
+    apt: name=digikam state=present
