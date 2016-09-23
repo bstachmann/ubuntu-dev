@@ -8,14 +8,14 @@
   - name: Allow VirtualBox Shared Folder Access for User Bjoern
     user: name=bjoern group=vboxsf
 
-  - name: Install VI Improved
-    apt: name=vim state=present
-
   - name: Configure ansible roles dir.
     lineinfile: dest=/etc/ansible/ansible.cfg regexp="#roles_path" line="roles_path=/home/bjoern/ansible-roles"
 
   - name: Link working directory
     file: src=/media/sf_work dest=/home/bjoern/work state=link
+
+  - name: Install VI Improved
+    apt: name=vim state=present
 
   - name: Add package source for Atom Editor
     apt_repository: repo='ppa:webupd8team/atom' state=present
