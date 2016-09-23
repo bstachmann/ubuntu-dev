@@ -1,5 +1,4 @@
 ---
-- src: ssh://pi@raspberrypi/git/ansible-roles.git
-  name: ansible-roles
+- src: https://github.com/hnakamur/ansible-role-atom-packages.git
   scm: git
   version: master

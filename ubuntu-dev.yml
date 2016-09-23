@@ -3,9 +3,6 @@
   remote_user: bjoern
   sudo: yes
 
-  roles:
-    - { role: '~/ansible-roles/dev-tools' }
-
   tasks:
 
   - name: Allow VirtualBox Shared Folder Access for User Bjoern
@@ -13,6 +10,9 @@
 
   - name: Install VI Improved
     apt: name=vim state=present
+
+  - name: Configure ansible roles dir.
+    lineinfile: dest=/etc/ansible/ansible.cfg regexp="#roles_path" line="roles_path=/home/bjoern/ansible-roles"
 
   - name: Link working directory
     file: src=/media/sf_work dest=/home/bjoern/work state=link
@@ -28,3 +28,8 @@
 
   - name: Install Digikam
     apt: name=digikam state=present
+
+  roles:
+    - role: ansible-role-atom-packages
+      sudo: no
+      atom_packages_packages: 'language-elm'
