@@ -4,7 +4,7 @@
   become: true
 
 - name: Configure ansible roles dir.
-  lineinfile: dest=/etc/ansible/ansible.cfg regexp="\#roles_path" line="roles_path=/home/bjoern/ansible-roles"
+  lineinfile: dest=/etc/ansible/ansible.cfg regexp="^#?roles_path=" line="roles_path=/home/{{ansible_user}}/ansible-roles"
   become: true
 
 - name: Link working directory
