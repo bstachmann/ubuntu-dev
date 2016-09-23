@@ -1,0 +1,9 @@
+---
+- name: Allow VirtualBox Shared Folder Access for User Bjoern
+  user: name=bjoern group=vboxsf
+
+- name: Configure ansible roles dir.
+  lineinfile: dest=/etc/ansible/ansible.cfg regexp="#roles_path" line="roles_path=/home/bjoern/ansible-roles"
+
+- name: Link working directory
+  file: src=/media/sf_work dest=/home/bjoern/work state=link

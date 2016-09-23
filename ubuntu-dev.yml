@@ -5,24 +5,6 @@
 
   tasks:
 
-  - name: Allow VirtualBox Shared Folder Access for User Bjoern
-    user: name=bjoern group=vboxsf
-
-  - name: Configure ansible roles dir.
-    lineinfile: dest=/etc/ansible/ansible.cfg regexp="#roles_path" line="roles_path=/home/bjoern/ansible-roles"
-
-  - name: Link working directory
-    file: src=/media/sf_work dest=/home/bjoern/work state=link
-
-  - name: Install VI Improved
-    apt: name=vim state=present
-
-  - name: Add package source for Atom Editor
-    apt_repository: repo='ppa:webupd8team/atom' state=present
-
-  - name: Install Atom Editor
-    apt: name=atom state=present
-
   - name: Install TeXLive
     apt: name=texlive-full state=present
 
@@ -30,6 +12,8 @@
     apt: name=digikam state=present
 
   roles:
+    - setup
+    - development-tools
     - role: ansible-role-atom-packages
       sudo: no
       atom_packages_packages: 'language-elm'

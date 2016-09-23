@@ -1,0 +1,9 @@
+---
+- name: Install VI Improved
+  apt: name=vim state=present
+
+- name: Add package source for Atom Editor
+  apt_repository: repo='ppa:webupd8team/atom' state=present
+
+- name: Install Atom Editor
+  apt: name=atom state=present
