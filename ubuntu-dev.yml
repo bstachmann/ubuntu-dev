@@ -4,13 +4,13 @@
 
   tasks:
 
-  - name: Install TeXLive
-    apt: name=texlive-full state=present
-    become: true
-
-  - name: Install Digikam
-    apt: name=digikam state=present
-    become: true
+  # - name: Install TeXLive
+  #   apt: name=texlive-full state=present
+  #   become: true
+  #
+  # - name: Install Digikam
+  #   apt: name=digikam state=present
+  #   become: true
 
   roles:
     - setup
