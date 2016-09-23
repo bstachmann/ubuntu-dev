@@ -9,3 +9,6 @@
 
 - name: Link working directory
   file: src=/media/sf_work dest=~/work state=link
+
+- name: Install SSH
+  apt: name=openssh-server state=present
