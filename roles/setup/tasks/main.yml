@@ -1,6 +1,6 @@
 ---
 - name: Allow VirtualBox Shared Folder Access for User Bjoern
-  user: name=bjoern group=vboxsf
+  user: name="{{ansible_user}}" group=vboxsf
   become: true
 
 - name: Configure ansible roles dir.
@@ -8,4 +8,4 @@
   become: true
 
 - name: Link working directory
-  file: src=/media/sf_work dest=/home/bjoern/work state=link
+  file: src=/media/sf_work dest=~/work state=link
