@@ -1,19 +1,21 @@
 ---
 - hosts: localhost
   remote_user: bjoern
-  sudo: yes
 
   tasks:
 
   - name: Install TeXLive
     apt: name=texlive-full state=present
+    become: true
 
   - name: Install Digikam
     apt: name=digikam state=present
+    become: true
 
   roles:
     - setup
     - development-tools
     - role: ansible-role-atom-packages
-      sudo: no
-      atom_packages_packages: 'language-elm'
+#      become: false
+      atom_packages_packages:
+        - language-elm
