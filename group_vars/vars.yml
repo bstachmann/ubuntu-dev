@@ -1,0 +1,3 @@
+---
+user_public_key: "{{vault_user_public_key}}"
+dev_user: "{{vault_dev_user}}"

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ansible-playbook ubuntu-dev.yml
+ansible-playbook ubuntu-dev.yml --ask-vault-pass

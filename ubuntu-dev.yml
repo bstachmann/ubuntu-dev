@@ -1,16 +1,25 @@
 ---
 - hosts: localhost
-  remote_user: bjoern
+
+  vars_files:
+    # - vault/vault.yml
+    - group_vars/vars.yml
+    - ~/.user_vault.yml
+
+  remote_user: "{{dev_user}}"
 
   tasks:
 
-  # - name: Install TeXLive
-  #   apt: name=texlive-full state=present
-  #   become: true
-  #
-  # - name: Install Digikam
-  #   apt: name=digikam state=present
-  #   become: true
+    - name: Echo
+      debug: var=dev_user
+
+    - name: Install TeXLive
+      apt: name=texlive-full state=present
+      become: true
+
+    - name: Install Digikam
+      apt: name=digikam state=present
+      become: true
 
   roles:
     - setup
