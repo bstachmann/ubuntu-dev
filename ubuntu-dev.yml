@@ -8,19 +8,6 @@
 
   remote_user: "{{dev_user}}"
 
-  tasks:
-
-    - name: Echo
-      debug: var=dev_user
-
-    - name: Install TeXLive
-      apt: name=texlive-full state=present
-      become: true
-
-    - name: Install Digikam
-      apt: name=digikam state=present
-      become: true
-
   roles:
     - setup
     - development-tools
@@ -28,3 +15,5 @@
 #      become: false
       atom_packages_packages:
         - language-elm
+    - writer-tools
+    - photo-tools

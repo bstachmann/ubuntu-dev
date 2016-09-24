@@ -1,0 +1,4 @@
+---
+- name: Install TeXLive
+  apt: name=texlive-full state=present
+  become: true

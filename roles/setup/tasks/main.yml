@@ -1,4 +1,7 @@
 ---
+- name: Print some interesting vars
+  debug: var=dev_user
+
 - name: Allow VirtualBox Shared Folder Access for User Bjoern
   user: name="{{ansible_user}}" group=vboxsf
   become: true
