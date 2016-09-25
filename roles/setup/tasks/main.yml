@@ -1,10 +1,13 @@
 ---
 - name: Print some interesting vars
-  debug: var=dev_user
+  debug: var=ubuntu_dev_become_pass
 
 - name: Configure ansible roles dir.
-  lineinfile: dest=/etc/ansible/ansible.cfg regexp="^#?roles_path=" line="roles_path=/home/{{ansible_user}}/ansible-roles"
+  lineinfile: dest=/etc/ansible/ansible.cfg regexp="^#?roles_path=" line="roles_path=/home/{{ansible_user_id}}/ansible-roles"
   become: true
 
 - name: Install SSH
   apt: name=openssh-server state=present
+
+- name: SSH key für user hochladen
+  authorized_key: user="{{ansible_user_id}}" key="{{user_public_key}}"

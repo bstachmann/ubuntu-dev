@@ -2,11 +2,7 @@
 - hosts: localhost
 
   vars_files:
-    # - vault/vault.yml
-    - group_vars/vars.yml
-    - ~/.user_vault.yml
-
-  remote_user: "{{dev_user}}"
+    - ~/.ubuntu-dev-vars.yml
 
   roles:
     - setup
