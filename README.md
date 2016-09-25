@@ -54,6 +54,6 @@ I have assigned some [tags](http://docs.ansible.com/ansible/playbooks_tags.html)
 * `heavy` - things that may take long, e.g. installing TexLive.
 * `configure` - configuring the environment
 
-If everything is installed and you want to try some configuration changes.
+If everything is installed and you want to try some configuration changes, just run:
 
-    ./run-ansible.sh --tasks configure
+    ./run-ansible.sh --tags configure
