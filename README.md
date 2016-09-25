@@ -44,15 +44,16 @@ WARNING: This may take a while. Actually some hours, because it includes an inst
 
 You can rerun the playbook any time.
 
+## Using Tags
 
+    ./run-ansible.sh --list-tags --list-tasks
 
-## Notes
+I have assigned some [tags](http://docs.ansible.com/ansible/playbooks_tags.html) to enable selective execution of tasks.
 
+* `install` - everything
+* `heavy` - things that may take long, e.g. installing TexLive.
+* `configure` - configuring the environment
 
-    git clone pi@raspberrypi:/git/ubuntu-dev.git
-    cd ubuntu-dev
-    sudo apt-get install ansible
-    ansible-playbook ubuntu-dev.yml
+If everything is installed and you want to try some configuration changes.
 
-
-    export DISPLAY=:0
+    ./run-ansible.sh --tasks configure
