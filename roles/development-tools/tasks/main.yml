@@ -44,7 +44,8 @@
       echo Welcome to UBUNTU-DEV
       echo - Activating VI mode for bash
       set -o vi
-
+      echo - Using UI on display :0
+      export DISPLAY=:0
       if [ -d work ]
         then
         echo - Entering 'work' directory
