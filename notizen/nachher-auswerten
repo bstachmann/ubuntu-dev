@@ -1,0 +1,93 @@
+    1  htop
+    2  ll
+    3  sudo ./VBoxLinuxAdditions.run 
+    4  ./autorun.sh 
+    5  cat ./autorun.sh 
+    6  pwd
+    7  ll
+    8  bash autorun.sh 
+    9  pwd
+   10  ll
+   11  shnVBoxLinuxAdditions.run
+   12  sh VBoxLinuxAdditions.run
+   13  exit
+   14  sh VBoxLinuxAdditions.run
+   15  ll
+   16  sudo -s
+   17  less /var/log/VBoxGuestAdditions.log 
+   18  sudo apt-get install dkms
+   19  sudo -s
+   20  ls
+   21  ll /media/sf_work/
+   22  groupadd --help
+   23  ll /media/
+   24  useradd -G vboxsf bjoern
+   25  usermod -a -G vboxsf bjoern
+   26  sudo usermod -a -G vboxsf bjoern
+   27  ping raspberrypi.local
+   28  ls
+   29  apt-get --help
+   30  apt-get clean
+   31  sudo apt-get clean
+   32  df -h
+   33  sudo apt-get clean
+   34  df -h
+   35  git status
+   36  apt-cache search ansible
+   37  sudo apt-get update
+   38  apt-get install git
+   39  sudo apt-get install git
+   40  sudo apt-get clean
+   41  ll
+   42  ll .config/
+   43  ll .config/lxterminal/
+   44  vim .config/lxterminal/lxterminal.conf 
+   45  vi .config/lxterminal/lxterminal.conf 
+   46  ll
+   47  cd .config/
+   48  git init
+   49  git add .
+   50  git status
+   51  git commit -am 'initial conf'
+   52  apt-cache search git
+   53  apt-cache search git | grep ^git
+   54  git commit
+   55  git config user.email 'stachi'
+   56  git config user.name 'stachi'
+   57  git commit 
+   58  cd ..
+   59  mkdir work
+   60  git clone pi@raspberrypi.local:ubuntu-dev.git
+   61  ping raspberrypi.local
+   62  ping raspberrypi
+   63  git clone pi@raspberrypi:ubuntu-dev.git
+   64  ifconfig
+   65  dpkg -l | grep ssh
+   66  sudo apt-get update
+   67  apt-cache search openssh
+   68  sudo apt-get install openssh-server
+   69  ll
+   70  ssh pi@raspberrypi
+   71  exit
+   72  ssh pi@raspberrypi
+   73  exit
+   74  sudo apt-get update
+   75  sudo apt-get install ansible
+   76  cd /media/bjoern/VBOXADDITIONS_5.1.6_110634/
+   77  ls
+   78  sudo sh VBoxLinuxAdditions.run 
+   79  usermod
+   80  sudo usermod -a -G vboxsf bjoern
+   81  sudo echo moin
+   82  cd /media/sf_work/
+   83  man ln
+   84  ln -s /media/sf_work/ablage/ansible/vault.yml ~/.user_vault.yml
+   85  cd ubuntu-dev/
+   86  sudo echo moin
+   87  ./install-requirements.sh 
+   88  ./playbook.sh 
+   89  ll ~
+   90  rm -rf ~/work
+   91  history
+   92  history >nachher-auswerten
+sudo mount -t vboxsf -o umask=022,uid=1000,gid=1000 work /home/bjoern/work
