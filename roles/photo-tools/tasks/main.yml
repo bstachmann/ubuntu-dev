@@ -1,4 +1,5 @@
 ---
 - name: Install Digikam
-  apt: name=digikam state=present
+  tags: [install,heavy]
   become: true
+  apt: name=digikam state=present

@@ -2,33 +2,41 @@
 
 - name: Install Git
   become: true
+  tags: [install]
   apt: name=git-all state=present
 
 - name: Install tig
   become: true
+  tags: [install]
   apt: name=tig state=present
 
 - name: Install htop
   become: true
+  tags: [install]
   apt: name=htop state=present
 
 - name: Install screen
   become: true
+  tags: [install]
   apt: name=screen state=present
 
 - name: Install VI Improved
   become: true
+  tags: [install]
   apt: name=vim state=present
 
 - name: Add package source for Atom Editor
   become: true
+  tags: [configure]
   apt_repository: repo='ppa:webupd8team/atom' state=present
 
 - name: Install Atom Editor
   become: true
+  tags: [install]
   apt: name=atom state=present
 
 - name: Add some extension to .bashrc
+  tags: [configure]
   blockinfile:
     dest: ~/.bashrc
     block: |
@@ -42,5 +50,3 @@
         echo - Entering 'work' directory
         cd work
       fi
-  tags:
-    - configuration

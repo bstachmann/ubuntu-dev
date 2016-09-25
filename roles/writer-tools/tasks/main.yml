@@ -1,4 +1,5 @@
 ---
 - name: Install TeXLive
-  apt: name=texlive-full state=present
+  tags: [install,heavy]
   become: true
+  apt: name=texlive-full state=present

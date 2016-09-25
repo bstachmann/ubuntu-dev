@@ -3,11 +3,14 @@
   debug: var=ubuntu_dev_become_pass
 
 - name: Configure ansible roles dir.
-  lineinfile: dest=/etc/ansible/ansible.cfg regexp="^#?roles_path=" line="roles_path=/home/{{ansible_user_id}}/ansible-roles"
+  tags: [configure]
   become: true
+  lineinfile: dest=/etc/ansible/ansible.cfg regexp="^#?roles_path=" line="roles_path=/home/{{ansible_user_id}}/ansible-roles"
 
 - name: Install SSH
+  tags: [install]
   apt: name=openssh-server state=present
 
 - name: SSH key für user hochladen
+  tags: [configure]
   authorized_key: user="{{ansible_user_id}}" key="{{user_public_key}}"

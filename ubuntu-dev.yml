@@ -8,8 +8,8 @@
     - setup
     - development-tools
     - role: ansible-role-atom-packages
-#      become: false
       atom_packages_packages:
         - language-elm
+      tags: [install]
     - writer-tools
     - photo-tools
