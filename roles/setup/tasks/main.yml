@@ -2,16 +2,9 @@
 - name: Print some interesting vars
   debug: var=dev_user
 
-- name: Allow VirtualBox Shared Folder Access for User Bjoern
-  user: name="{{ansible_user}}" group=vboxsf
-  become: true
-
 - name: Configure ansible roles dir.
   lineinfile: dest=/etc/ansible/ansible.cfg regexp="^#?roles_path=" line="roles_path=/home/{{ansible_user}}/ansible-roles"
   become: true
-
-- name: Link working directory
-  file: src=/media/sf_work dest=~/work state=link
 
 - name: Install SSH
   apt: name=openssh-server state=present
