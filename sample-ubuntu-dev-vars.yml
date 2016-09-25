@@ -1,0 +1,4 @@
+---
+# Custom User config goes here
+# Copy tthis to ~/.ubuntu-dev-vars.yml
+user_public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA4CywGH9P6OBDUVvA5r2YVnDupQ6aHbUl2p+b6ZI4PNYTv9oLst+NgmsoIjfRFxJDKjhCzQQDr+oRNbkKKgarXW5Cljm5DOgJ3/rj3jqKKobpEfmo2PahoeHWOmkWHEykxfM1e2e1QjKlIPrTrfmXWdeBsKsF6nunWhfHk02JCzKXlMJwDNfHr76S2m1vQVJjpNTHmJL6hH+Jnsy9aXztBCIDxYbGNe/rRjpt4aujovOxkYtWd+x9KS1Olsu3DXaVVwfwxlubpju/JFfFFVHB5FA3FfEyzHv9dUOsKCRPiEjDFQwWCTRbYSEs3XT9WxNbFsdRwj5c1Or+KLvkjo26iQ== stachi@macintosh"
