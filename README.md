@@ -57,3 +57,11 @@ I have assigned some [tags](http://docs.ansible.com/ansible/playbooks_tags.html)
 If everything is installed and you want to try some configuration changes, just run:
 
     ./run-ansible.sh --tags configure
+
+
+## Links
+
+  * Directory laytout: http://docs.ansible.com/ansible/playbooks_best_practices.html
+  * Add Code to `.bashrc`:  https://docs.ansible.com/ansible/blockinfile_module.html
+  * Sudoing: http://docs.ansible.com/ansible/become.html
+  * Permissons, VirtualBox, Ubuntu, Mac Os: http://askubuntu.com/questions/123025/what-is-the-correct-way-to-share-directories-in-mac-and-ubuntu-with-correct-perm
