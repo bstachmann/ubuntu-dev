@@ -1,4 +1,21 @@
 ---
+
+- name: Install Git
+  become: true
+  apt: name=git-all state=present
+
+- name: Install tig
+  become: true
+  apt: name=tig state=present
+
+- name: Install htop
+  become: true
+  apt: name=htop state=present
+
+- name: Install screen
+  become: true
+  apt: name=screen state=present
+
 - name: Install VI Improved
   become: true
   apt: name=vim state=present
@@ -10,3 +27,20 @@
 - name: Install Atom Editor
   become: true
   apt: name=atom state=present
+
+- name: Add some extension to .bashrc
+  blockinfile:
+    dest: ~/.bashrc
+    block: |
+      echo
+      echo Welcome to UBUNTU-DEV
+      echo - Activating VI mode for bash
+      set -o vi
+
+      if [ -d work ]
+        then
+        echo - Entering 'work' directory
+        cd work
+      fi
+  tags:
+    - configuration
