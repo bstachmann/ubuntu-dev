@@ -3,3 +3,8 @@
   tags: [install,heavy]
   become: true
   apt: name=texlive-full state=present
+
+- name: Install Jekyll
+  tags: [install,heavy]
+  become: true
+  apt: name=jekyll state=present
