@@ -8,6 +8,7 @@
   lineinfile: dest=/etc/ansible/ansible.cfg regexp="^#?roles_path=" line="roles_path=/home/{{ansible_user_id}}/ansible-roles"
 
 - name: Install SSH
+  become: true
   tags: [install]
   apt: name=openssh-server state=present
 
