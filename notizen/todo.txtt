@@ -1,0 +1,5 @@
+install java 9
+install eclipse
+
+Hinweis lokal auf mac in /etc/ssh/ssh_config auskommentieren
+#   SendEnv LANG LC_*

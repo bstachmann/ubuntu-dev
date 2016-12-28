@@ -1,0 +1,4 @@
+Host 192.168.56.101
+  ForwardAgent yes
+Host 192.168.188.21
+  ForwardAgent yes
