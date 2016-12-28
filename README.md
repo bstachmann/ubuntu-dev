@@ -18,6 +18,13 @@ This is an ansible playbook to configure my working environment.
 
  This might be automated using Vagrant. But i haven't.
 
+### possible improvement: install new version fo ansible
+
+    $ sudo apt-get install software-properties-common
+    $ sudo apt-add-repository ppa:ansible/ansible
+    $ sudo apt-get update
+    $ sudo apt-get install ansible
+
 ## Apply UBUNTU-DEV
 
 On the quest, navigate to the project folder:
