@@ -46,6 +46,8 @@
       set -o vi
       echo - Use VIM as default editor.
       export EDITOR=vim
+      echo - Add alias to call atom without in the open window and without using gpu.
+      alias atom='/usr/bin/atom --disable-gpu --add '
       echo - Using UI on display :0
       export DISPLAY=:0
       if [ -d work ]
