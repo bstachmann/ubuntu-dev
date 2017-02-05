@@ -16,6 +16,6 @@
   tags: [configure]
   authorized_key: user="{{ansible_user_id}}" key="{{user_public_key}}"
 
-- name: Configure Screen Saver not lock. (This is meant to run in a VM, so the host will lock)
-  tags: [configure]
-  copy: src=xfce4-power-manager.xml dest=~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
+#- name: Configure Screen Saver not lock. (This is meant to run in a VM, so the host will lock)
+#  tags: [configure]
+#  copy: src=xfce4-power-manager.xml dest=~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
