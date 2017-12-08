@@ -1,1 +1,2 @@
  * configure git user and email in installation
+ * setup .ssh/config to forward to raspberrypi
