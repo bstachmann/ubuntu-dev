@@ -11,5 +11,5 @@
       atom_packages_packages:
         - language-elm
       tags: [install]
-    - writer-tools
-    - photo-tools
+#    - writer-tools
+#    - photo-tools
