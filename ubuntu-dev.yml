@@ -5,11 +5,13 @@
     - ~/.ubuntu-dev-vars.yml
 
   roles:
-    - setup
-    - development-tools
+#    - setup
+#    - development-tools
+    - elm-programming
     - role: ansible-role-atom-packages
       atom_packages_packages:
         - language-elm
+        - elmjutsu
       tags: [install]
 #    - writer-tools
 #    - photo-tools

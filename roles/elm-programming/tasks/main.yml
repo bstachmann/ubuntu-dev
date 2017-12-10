@@ -1,0 +1,24 @@
+
+- name: Install NodeJS
+  apt: name=nodejs state=present
+  become: true
+
+- name: Install NodeJS (legacy)
+  apt: name=nodejs-legacy state=present
+  become: true
+
+- name: Install npm
+  apt: name=npm state=present
+  become: true
+
+- name: Creates directory
+  file: path=/opt/npm state=directory
+  become: true
+
+- name: Install elm
+  npm: name=elm state=present global=yes path=/opt/npm
+  become: true
+
+- name: Install elm-format
+  npm: name=elm-format state=present global=yes path=/opt/npm
+  become: true
