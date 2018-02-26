@@ -3,9 +3,9 @@
   apt: name=nodejs state=present
   become: true
 
-- name: Install NodeJS (legacy)
-  apt: name=nodejs-legacy state=present
-  become: true
+# - name: Install NodeJS (legacy)
+#   apt: name=nodejs-legacy state=present
+#   become: true
 
 - name: Install npm
   apt: name=npm state=present

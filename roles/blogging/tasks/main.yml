@@ -1,0 +1,15 @@
+- block:
+
+  - apt:
+      name: ruby-dev
+      state: present
+
+  - apt:
+      name: ruby-bundler
+      state: present
+
+  - gem:
+      name: jekyll
+      state: latest
+
+  become: yes

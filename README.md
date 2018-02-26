@@ -6,16 +6,14 @@ This is an ansible playbook to configure my working environment.
 
  * Install *Ubuntu* (actually i use the less fancy Lubunt which better fits my old macbooks)
  * Install *VirtualBox Guest Additions*
- * Mount a *shared folder* from the hoste to `~/work` on the guest (no Auto-Mount)
-   - On the host check out this project to the work folder to `work/ubuntu-dev`
-   - VirtualBox shared folders are a bit tricky sometimes. I did this, to make it work for me:
-     - `mkdir ~/work`
-     - `sudo mount -t vboxsf -o umask=0022,uid=1000,gid=1000 work ~/work`
+ * Mount a *shared folder* containint the ubuntu-dev folder
+ * Add to group vboxsf so we can read the folder
      - `sudo usermod -a -G vboxsf bjoern`
      - then logout and login again
+
+ * Install gi
  * Install *ansible*
    - `sudo apt-get install ansible`
- * (Optional) Add a *host-only Network Interface*, if you want to access the machine via SSH from your host.
 
  This might be automated using Vagrant. But i haven't.
 
