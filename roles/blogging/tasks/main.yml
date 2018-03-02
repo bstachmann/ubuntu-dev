@@ -8,8 +8,19 @@
       name: ruby-bundler
       state: present
 
-  - gem:
-      name: jekyll
-      state: latest
-
   become: yes
+
+- gem:
+    name: jekyll
+    state: latest
+
+- name: Ruby executables path to .bashrc
+  tags: [configure]
+  blockinfile:
+    dest: ~/.bashrc
+    marker: "# {mark} RUBY EXTENSION MANAGED BY ANSIBLE"
+    block: |
+      if which ruby >/dev/null && which gem >/dev/null; then
+          PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+      fi
+      echo - Added path for ruby executables.
