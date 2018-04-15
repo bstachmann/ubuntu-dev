@@ -68,7 +68,6 @@ If everything is installed and you want to try some configuration changes, just 
 
     ./run-ansible.sh --tags configure
 
-
 ## Links
 
   * Directory layout: http://docs.ansible.com/ansible/playbooks_best_practices.html
