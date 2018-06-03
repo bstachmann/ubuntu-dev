@@ -20,6 +20,11 @@
     value: diff3
     scope: global
 
+- name: Build essentials (so that native parts of ruby gems can bei built)
+  become: true
+  tags: [install]
+  apt: name=build-essential state=present
+
 - name: Install htop
   become: true
   tags: [install]
