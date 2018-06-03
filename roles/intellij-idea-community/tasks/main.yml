@@ -1,0 +1,6 @@
+---
+
+- name: Install IntelliJ IDEA Community Edition
+  become: true
+  tags: [install]
+  command: snap install intellij-idea-community --classic --edge

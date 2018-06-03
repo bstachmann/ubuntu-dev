@@ -9,6 +9,7 @@
     - development-tools
     - blogging
     - elm-programming
+    - intellij-idea-community
     - role: ansible-role-atom-packages
       atom_packages_packages:
        - language-elm
