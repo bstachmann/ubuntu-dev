@@ -1,0 +1,6 @@
+---
+
+- name: Kotlin
+  become: true
+  tags: [install]
+  command: snap install --classic kotlin

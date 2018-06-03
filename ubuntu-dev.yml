@@ -10,6 +10,7 @@
     - blogging
     - elm-programming
     - intellij-idea-community
+    - kotlin
     - role: ansible-role-atom-packages
       atom_packages_packages:
        - language-elm
