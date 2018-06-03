@@ -25,6 +25,16 @@
   tags: [install]
   apt: name=build-essential state=present
 
+- name: JDK8
+  become: true
+  tags: [install]
+  apt: name=openjdk-8-jdk
+
+- name: JDK8 Sources
+  become: true
+  tags: [install]
+  apt: name=openjdk-8-source
+
 - name: Install htop
   become: true
   tags: [install]
