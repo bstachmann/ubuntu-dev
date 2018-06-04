@@ -1,0 +1,14 @@
+---
+- block:
+  
+  - name: Add package source for Atom Editor
+    become: true
+    tags: [configure]
+    apt_repository: repo='ppa:webupd8team/atom' state=present
+
+  - name: Install Atom Editor
+    become: true
+    tags: [install]
+    apt: name=atom state=present
+
+  become: true
