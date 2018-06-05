@@ -2,14 +2,14 @@
 
 This is an ansible playbook to configure my working environment.
 
-## Create a VirtualBox Machine
+## 1. Create a VirtualBox Machine
 
  * Install *Ubuntu* (e.g. 18.04)
  * Install *VirtualBox Guest Additions*
    * Make sure to read the message and check that the additions have been built.
      You may have to install gcc make and perl first.
  
-## Create or mount `work` Folder
+## 2. Create or mount `work` Folder
  
 `ubuntu-dev` expects the projects in`/home/<user>/work`.
 You can create the `work` folder locally, 
@@ -17,6 +17,11 @@ but i recommend using an external folder,
 because that makes it easier and faster to recreate your work in fresh box,
 in case you screw it up in some way or other.
 For myself i use an SD-Card wich i configure to be mounted to `/home/<user>/work`.
+(Hint: If your host is Windows 10, you should disable "USB Settings -> stop devices when my screen is off ...", to avoid losing the mounted device in the quest.)
+
+## 3. Clone `ubuntu-dev` to `work`
+
+Unless, of cource, it is there already, because you are reusing the work folder as described above.
 
 ## Apply UBUNTU-DEV
 
