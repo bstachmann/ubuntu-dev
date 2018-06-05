@@ -4,29 +4,14 @@ This is an ansible playbook to configure my working environment.
 
 ## Create a VirtualBox Machine
 
- * Install *Ubuntu* (actually i use the less fancy Lubunt which better fits my old macbooks)
+ * Install *Ubuntu* (e.g. 18.04)
  * Install *VirtualBox Guest Additions*
- * Mount a *shared folder* containint the ubuntu-dev folder
- * Add to group vboxsf so we can read the folder
-     - `sudo usermod -a -G vboxsf bjoern`
-     - then logout and login again
-
- * Install gi
- * Install *ansible*
-   - `sudo apt-get install ansible`
-
- This might be automated using Vagrant. But i haven't.
-
-### possible improvement: install new version of ansible
-
-    $ sudo apt-get install software-properties-common
-    $ sud
-    $ sudo apt-get update
-    $ sudo apt-get install ansible
-
-    $ sudo apt-get install git-all git-daemon-sysvinit
-
-    (Sysvinit wegen upstart vs systemd)
+   * Make sure to read the message and check that the additions have been built.
+     You may have to install gcc make and perl first.
+ 
+## Create or mount `work` Folder
+ 
+`ubuntu-dev` expects the projects in`/home/<user>/work`.
 
 ## Apply UBUNTU-DEV
 
