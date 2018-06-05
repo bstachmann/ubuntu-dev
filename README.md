@@ -12,6 +12,11 @@ This is an ansible playbook to configure my working environment.
 ## Create or mount `work` Folder
  
 `ubuntu-dev` expects the projects in`/home/<user>/work`.
+You can create the `work` folder locally, 
+but i recommend using an external folder,
+because that makes it easier and faster to recreate your work in fresh box,
+in case you screw it up in some way or other.
+For myself i use an SD-Card wich i configure to be mounted to `/home/<user>/work`.
 
 ## Apply UBUNTU-DEV
 
@@ -24,11 +29,6 @@ Just copy the template and adjust it for your environment:
     cp sample-ubuntu-dev-vars.yml ~/.ubuntu-dev-vars.yml
 
 Probably you should replace my SSH public key with yours. Well ... unless you want met to visit your machine.
-
-Then start the script to load the required ansible-roles  into ansibles local repository.
-
-    ./prepare-ansible.sh
-
 And then ... TADAAAA ... you can run the playbook:
 
     ./run-ansible.sh
