@@ -1,0 +1,4 @@
+---
+- name: Atom - telemetryConsent
+  lineinfile: dest=~/.atom/config.cson regexp='^    telemetryConsent:' line='    telemetryConsent- no'
+  #'    telemetryConsent\: \"no\"'
