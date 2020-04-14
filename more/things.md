@@ -2,4 +2,4 @@
 
 ## Things
 
-![Ein Bild](../imagen.png)
+![Ein Bild](../image.png)
