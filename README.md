@@ -60,6 +60,7 @@ If everything is installed and you want to try some configuration changes, just 
 
 ## Links
 
+  * Some more [things](more/things.md)
   * Directory layout: http://docs.ansible.com/ansible/playbooks_best_practices.html
   * Add Code to `.bashrc`:  https://docs.ansible.com/ansible/blockinfile_module.html
   * Sudoing: http://docs.ansible.com/ansible/become.html
